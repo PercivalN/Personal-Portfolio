@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+        
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+        }
+        header {
+          background: transparent;
+          background-color: #eee;
+          position: fixed;
+          top: 0;
+          width: 100%;
+        
+        }
+        
+        header::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+        nav {
+          float: right;
+          
+        }
+        
+        nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          
+        }
+        
+        nav li {
+          display: inline-block;
+          margin-left: 70px;
+          padding-top: 25px;
+          padding-bottom: 20px;
+          padding-right: 10px;
+          position: relative;
+          align-items: center;
+        }
+        
+        nav a {
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        
+        nav a:hover {
+          color: #000;
+        }
+        
+        nav a::before {
+          content: '';
+          display: block;
+          height: 5px;
+          width: 100%;
+          background-color: #444;
+          position: absolute ;
+          top: 0;
+          width: 0%;
+          
+          transition: all ease-in-out 350ms;
+        }
+        
+        nav a:hover::before {
+          width: 100%;
+        
+        }
+        
+        h1 {
+          margin: 0;
+        }
+      
+        .welcome-section {
+            background-image: url("https://s3.amazonaws.com/ngans.org/bg-desk.jpg");
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            z-index: -10;
+        }
+
+        .welcome-overlay {
+          position: absolute;
+          background-color: rgba(0,0,0,0.25);
+          top: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          z-index: -5;
+        }
+
+        .project-section{
+            display: grid;
+        }
+        
+        /* .project-title{
+            /*display: flex;*/
+            /*flex-basis: 50%;*/
+            /*justify-content: center;*/
+            /*flex-direction: row;*/
+            /*align-items: stretch;*/
+            /*justify-content: flex-start;*/
+            /*width: 300px;*/
+            /*height: 400px;*/
+            /*justify-content: center;
+        } 
+        */
+
+        .first-row{
+          display: flex;
+          justify-content: space-around;
+        }
+
+        /*
+        .first-row div{
+          border: 1px #ccc solid;
+          padding: 10px;
+        }
+        */
+
+        .project-title{
+          flex-basis: auto;
+          margin-top: 80px;
+          padding: 2em;
+
+        }
+
+        .title{
+          font-size: 15pt;
+          height: 80px;
+          color: #0000ff;
+          background-color: #666699;
+          
+          position: relative;
+          align-items: center;
+          padding: 15px;
+        }
+
+        /*
+        .image{
+          max-width: 50%;
+          max-height: auto;
+        }
+        */
+
+        img{
+          width: 100%;
+          height: auto;
+        }
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Working</title>
+
+
+</head>
+
+
+<body>
+    <main>
+    <header>
+      
+    <div class="container">
+    <nav id="navbar">
+      <ul>
+        <li><a href="#welcome-section">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    </div>
+    </header>
+  
+  <section class="welcome-section" id="welcome-section">
+    <div class="welcome-overlay"></div>
+    <h1>Welcome</h1>
+  </section>
+  
+  <section id="projects" class="project-section">
+    <div class="first-row">
+      <div class="project-title">
+        <div class="title">
+          <h1 align="center">Tribute Page</h1>
+        </div>
+        <div class="image">
+          <img src="https://s3.amazonaws.com/ngans.org/Tribute+page+screenshot.png" alt="Tribute page">
+        </div>
+      </div>  
+
+      <div class="project-title">
+        <div class="title">
+          <h1 align="center">Tribute Page2</h1>
+        </div>
+        <div class="image">
+          <img src="https://s3.amazonaws.com/ngans.org/Tribute+page+screenshot.png" alt="Tribute page">
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+</body>
+
+<footer></footer>
+
+</html>

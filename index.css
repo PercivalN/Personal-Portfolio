@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+        
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+        }
+        header {
+          background: transparent;
+          background-color: #eee;
+
+        }
+        
+        header::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+        nav {
+          float: right;
+          
+        }
+        
+        nav ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          
+        }
+        
+        nav li {
+          display: inline-block;
+          margin-left: 70px;
+          padding-top: 25px;
+          padding-bottom: 20px;
+          padding-right: 10px;
+          position: relative;
+          align-items: center;
+        }
+        
+        nav a {
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        
+        nav a:hover {
+          color: #000;
+        }
+        
+        nav a::before {
+          content: '';
+          display: block;
+          height: 5px;
+          weigth: 100%;
+          background-color: #444;
+          position: absolute ;
+          top: 0;
+          width: 0%;
+          
+          transition: all ease-in-out 350ms;
+        }
+        
+        nav a:hover::before {
+          width: 100%;
+        
+        }
+        
+        h1 {
+          margin: 0;
+        }
+      
+        .welcome-section {
+            background-image: url("https://s3.amazonaws.com/ngans.org/bg-desk.jpg");
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            top: 0;
+            bottom: 0;
+            height: 100vh;
+            z-index: -10;
+        }
+
+        .welcome-overlay {
+          position: absolute;
+          background-color: rgba(0,0,0,0.25);
+          top: 0;
+          bottom: 0;
+          height: 100%;
+          width: 100%;
+          z-index: -5;
+        }
+
+        .projects{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 1em;
+            justify-items: stretch;
+            align-items: stretch;
+        }
+
+        .projects > div{
+            background-color:#eee;
+            padding: 1em;
+            
+        }
